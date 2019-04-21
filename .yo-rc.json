@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "employltda",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "employltda",
+        "packageName": "employltda",
+        "packageFolder": "employltda",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mysql",
+        "prodDatabaseType": "mysql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "NDA4NTExNDlkYTIxZTYxMjUxNmQwN2I3Y2U2YjZkOWUxMTQyYmQyYzFhN2NmN2QwYmJjNDA4ZTFiNmM3OWZmY2ZjMmQxMTQyMDNjYzQ3N2JiN2I1ZDhlZWRiYTA5ODJlYTdmYzUxMzZjZWIzYTYyMmFlMmFhNTVkMTI2NzBiNmI=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en"]
+    }
+}
