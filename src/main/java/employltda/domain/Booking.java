@@ -1,10 +1,10 @@
 package employltda.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
 
 
-public class Booking{
+public class Booking implements Serializable{
+    private static final long serialVersionUID = 1L;
 
     private Integer bookingID;
 
@@ -15,14 +15,15 @@ public class Booking{
 
     private Boolean isCoffee;
 
-    private List bookingLocalID;
-    private List bookingRoomID;
+    private Integer bookingLocalID;
+    private Integer bookingRoomID;
 
     public Booking(){
     }
 
+    //region Constructor
     public Booking(Integer bookingID, String startDate, String endDate, String bookingResponsible,
-    String note, Boolean isCoffee, List bookingLocalID, List bookingRoomID){
+    String note, Boolean isCoffee, Integer bookingLocalID, Integer bookingRoomID){
         super();
         this.bookingID = bookingID;
         this.startDate = startDate;
@@ -33,7 +34,9 @@ public class Booking{
         this.bookingLocalID = bookingLocalID;
         this.bookingRoomID = bookingRoomID;
     }
-
+    //endregion
+    //region Getters e Setters
+//---------------------------------------------------------------------------------------
     /**
      * @return the bookingID
      */
@@ -121,33 +124,57 @@ public class Booking{
     /**
      * @return the bookingLocalID
      */
-    public List getBookingLocalID() {
+    public Integer getBookingLocalID() {
         return bookingLocalID;
     }
 
     /**
      * @param bookingLocalID the bookingLocalID to set
      */
-    public void setBookingLocalID(List bookingLocalID) {
+    public void setBookingLocalID(Integer bookingLocalID) {
         this.bookingLocalID = bookingLocalID;
     }
 
     /**
      * @return the bookingRoomID
      */
-    public List getBookingRoomID() {
+    public Integer getBookingRoomID() {
         return bookingRoomID;
     }
 
     /**
      * @param bookingRoomID the bookingRoomID to set
      */
-    public void setBookingRoomID(List bookingRoomID) {
+    public void setBookingRoomID(Integer bookingRoomID) {
         this.bookingRoomID = bookingRoomID;
     }
+    //---------------------------------------------------------------------------------------
+//endregion
+    //region hashCode e equals
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((bookingID == null) ? 0 : bookingID.hashCode());
+        return result;
+    }
 
-    
-
-
-
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Booking other = (Booking) obj;
+        if (bookingID == null) {
+            if (other.bookingID != null)
+                return false;
+        } else if (!bookingID.equals(other.bookingID))
+            return false;
+        return true;
+    }
+    //---------------------------------------------------------------------------------------
+//endregion
 }
