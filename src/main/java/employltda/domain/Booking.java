@@ -6,6 +6,8 @@ import java.util.List;
 
 public class Booking{
 
+    private Integer bookingID;
+
     private String startDate;
     private String endDate;
     private String bookingResponsible;
@@ -19,9 +21,10 @@ public class Booking{
     public Booking(){
     }
 
-    public Booking(String startDate, String endDate, String bookingResponsible,
+    public Booking(Integer bookingID, String startDate, String endDate, String bookingResponsible,
     String note, Boolean isCoffee, List bookingLocalID, List bookingRoomID){
         super();
+        this.bookingID = bookingID;
         this.startDate = startDate;
         this.endDate = endDate;
         this.bookingResponsible = bookingResponsible;
@@ -29,6 +32,20 @@ public class Booking{
         this.isCoffee = isCoffee;
         this.bookingLocalID = bookingLocalID;
         this.bookingRoomID = bookingRoomID;
+    }
+
+    /**
+     * @return the bookingID
+     */
+    public Integer getBookingID() {
+        return bookingID;
+    }
+
+    /**
+     * @param bookingID the startDate to set
+     */
+    public void setBookingID(Integer bookingID) {
+        this.bookingID = bookingID;
     }
 
     /**
